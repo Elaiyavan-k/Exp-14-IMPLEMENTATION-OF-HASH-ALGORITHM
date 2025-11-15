@@ -1,6 +1,5 @@
 ## Exp 14 : IMPLEMENTATION OF HASH ALGORITHM
 
-
 ## AIM:
 
 To implement a simple hash algorithm in C to generate a hash value for a given message, demonstrating how hashing can be used for data integrity.
@@ -18,8 +17,28 @@ b.	Add the ASCII value of the current character to the hash.
 
 
 ## PROGRAM:
+```c
+#include <stdio.h>
 
+int main() {
+    char message[100];
+    unsigned long hash = 0;
+    int i;
+
+    printf("Enter a message: ");
+    scanf("%s", message);
+
+    for (i = 0; message[i] != '\0'; i++) {
+        hash = hash * 31 + message[i];
+    }
+
+    printf("\nGenerated Hash Value: %lu\n", hash);
+    return 0;
+}
+```
 ## OUTPUT:
+<img width="1655" height="567" alt="image" src="https://github.com/user-attachments/assets/7bd00f1e-417b-4a31-bfca-2ce9f977fc22" />
+
 
 ## RESULT:
 
